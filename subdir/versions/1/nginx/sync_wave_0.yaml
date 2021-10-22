@@ -2,18 +2,17 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: onedir-sync-wave-0 # default
+  name: subdir-sync-wave-0 # default
   namespace: argocd-sync-wave-problem
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: onedir-nginx
+      app: subdir-nginx
   template:
     metadata:
       labels:
-        app: onedir-nginx
-        version: "2"
+        app: subdir-nginx
     spec:
       containers:
       - name: nginx

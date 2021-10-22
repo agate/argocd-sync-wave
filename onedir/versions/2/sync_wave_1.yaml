@@ -2,7 +2,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: sync-wave-1-
+  generateName: onedir-sync-wave-1-
   namespace: argocd-sync-wave-problem
   annotations:
     argocd.argoproj.io/hook: Sync
