@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/agate/argocd-sync-wave-problem.git
     targetRevision: HEAD
-    path: subdir/versions/1/nginx
+    path: subdir/versions/2/nginx
   syncPolicy:
     automated: {}
   destination:
