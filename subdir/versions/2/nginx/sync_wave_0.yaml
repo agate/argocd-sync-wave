@@ -1,0 +1,32 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: subdir-sync-wave-0 # default
+  namespace: argocd-sync-wave-problem
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: subdir-nginx
+  template:
+    metadata:
+      labels:
+        app: subdir-nginx
+        version: "2"
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - name: app
+          containerPort: 80
+          protocol: TCP
+        livenessProbe:
+          httpGet:
+            path: "/"
+            port: 80
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          timeoutSeconds: 10
+          failureThreshold: 3
