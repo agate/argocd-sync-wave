@@ -7,11 +7,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/agate/argocd-sync-wave-problem.git
+    repoURL: https://github.com/agate/argocd-sync-wave.git
     targetRevision: HEAD
     path: subdir/versions/1/nginx
   syncPolicy:
     automated: {}
   destination:
-    namespace: argocd-sync-wave-problem
+    namespace: argocd-sync-wave
     server: https://kubernetes.default.svc

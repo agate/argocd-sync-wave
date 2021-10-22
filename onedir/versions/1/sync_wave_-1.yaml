@@ -3,7 +3,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   generateName: onedir-sync-wave--1-
-  namespace: argocd-sync-wave-problem
+  namespace: argocd-sync-wave
   annotations:
     argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/sync-wave: "-1"

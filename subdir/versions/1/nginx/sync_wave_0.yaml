@@ -3,7 +3,7 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: subdir-sync-wave-0 # default
-  namespace: argocd-sync-wave-problem
+  namespace: argocd-sync-wave
 spec:
   replicas: 1
   selector:
