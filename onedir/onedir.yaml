@@ -1,0 +1,17 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: onedir
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/agate/argocd-sync-wave-problem.git
+    targetRevision: HEAD
+    path: onedir/versions/1
+  syncPolicy:
+    automated: {}
+  destination:
+    namespace: argocd-sync-wave-problem
+    server: https://kubernetes.default.svc
