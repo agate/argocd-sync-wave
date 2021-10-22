@@ -1,0 +1,22 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: sync-wave--1-
+  namespace: argocd-sync-wave-problem
+  annotations:
+    argocd.argoproj.io/hook: Sync
+    argocd.argoproj.io/sync-wave: "-1"
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: runner
+        image: busybox
+        command:
+        - /bin/sh
+        - -c
+        - echo sleep 30 seconds && sleep 30 && echo done wave -1
+  backoffLimit: 3
