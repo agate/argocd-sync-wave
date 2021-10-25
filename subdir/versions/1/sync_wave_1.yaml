@@ -2,7 +2,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: subdir-sync-wave-1
+  generateName: subdir-sync-wave-1-
   namespace: argocd-sync-wave
   annotations:
     argocd.argoproj.io/hook: Sync
@@ -18,5 +18,5 @@ spec:
         command:
         - /bin/sh
         - -c
-        - echo sleep 30 seconds && sleep 30 && echo done wave 1
+        - echo sleep 15 seconds && sleep 15 && echo done wave 1
   backoffLimit: 3
