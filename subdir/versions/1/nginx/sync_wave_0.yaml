@@ -12,6 +12,7 @@ spec:
   template:
     metadata:
       labels:
+        version: '2'
         app: subdir-nginx
     spec:
       containers:
