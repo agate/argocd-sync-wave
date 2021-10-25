@@ -2,7 +2,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: subdir-post-sync-wave-0
+  name: subdir-post-sync-wave-0
   namespace: argocd-sync-wave
   annotations:
     argocd.argoproj.io/hook: PostSync
